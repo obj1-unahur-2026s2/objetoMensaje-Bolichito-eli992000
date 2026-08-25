@@ -51,12 +51,12 @@ object munieco{
 
 }
 object placa{
-    var property color = "celeste"
+    var property color = "pardo"
     var property peso = 2000
     const property material = "cobre"
      
      method esDeColorFuere(){
-        return self.color == "rojo" || self.color == "verde"
+        return self.color() == "rojo" || self.color() == "verde"
 }
     method esDeMaterialQueBrilla(){
         return true
@@ -89,11 +89,11 @@ object banquito{
 }
 object cajita{
     const property color = "rojo"
-    const peso = 400
+    const property pesoCajaSola = 400
     const property material = "cobre"
      method peso(otraCosa){
-        return self.peso()+ otraCosa.peso()
-        }S
+        return self.pesoCajaSola()+ otraCosa.peso()
+        }
      method esDeColorFuere(){
         return true
 }

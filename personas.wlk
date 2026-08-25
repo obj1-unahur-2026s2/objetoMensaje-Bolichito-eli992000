@@ -17,7 +17,7 @@ object luisa {
     }
 }
 object juan{
-    return leGusta(unaCosa){
-        return unaCosa.esDeColorFuere() && unaCosa.peso() between 1200 and 1800
+    method leGusta(unaCosa){
+        return !unaCosa.esDeColorFuere() && unaCosa.peso().between(1200, 1800)
     }
 }
