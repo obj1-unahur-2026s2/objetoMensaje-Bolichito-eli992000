@@ -92,7 +92,10 @@ object munieco{
     const property color = celeste
     var property peso = 10
     const property material = vidrio
-     
+    
+    method cambiarPeso(nuevoPeso){
+        peso = nuevoPeso
+    } 
     method esDeColorFuerte(){
         return self.color().esFuerte()
     }
@@ -104,7 +107,13 @@ object placa{
     var property color = pardo
     var property peso = 2000
     const property material = cobre
-     
+
+    method cambiarColor(nuevoColor){
+        color = nuevoColor
+    }
+    method cambiarPeso(nuevoPeso){
+        peso = nuevoPeso
+    } 
     method esDeColorFuerte(){
         return self.color().esFuerte()
     }
@@ -128,7 +137,10 @@ object banquito{
     var property color = naranja
     const property peso = 1700
     const property material = madera
-     
+
+    method cambiarColor(nuevoColor){
+        color = nuevoColor
+    } 
     method esDeColorFuerte(){
         return self.color().esFuerte()
     }
@@ -139,11 +151,15 @@ object banquito{
 object cajita{
     const property color = rojo
     const property pesoCajaSola = 400
+    var property pesoContenido = 0
     const property material = cobre
-    
-     method peso(otraCosa){
-        return self.pesoCajaSola()+ otraCosa.peso()
-        }
+     
+    method guardarAdentro(unaCosa){
+      pesoContenido = unaCosa.peso()
+    }
+    method peso(){
+        return self.pesoCajaSola() + self.pesoContenido()
+    }
     method esDeColorFuerte(){
         return self.color().esFuerte()
     }
