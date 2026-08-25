@@ -52,11 +52,11 @@ object vidrio{
 }
 // OBJETOS : COSAS
 object remera{
-    const property color = "rojo"
+    const property color = rojo
     const property peso = 800
-    const property material = "lino"
+    const property material = lino
 
-    method esDeColorFuere(){
+    method esDeColorFuerte(){
         return self.color().esFuerte()
     }
     method esDeMaterialQueBrilla(){
@@ -64,93 +64,90 @@ object remera{
     }
    }
    object pelota{
-    const property color = "pardo"
+    const property color = pardo
     const property peso = 1300
-    const property material = "cuero"
+    const property material = cuero
      
-     method esDeColorFuerte(){
+    method esDeColorFuerte(){
         return self.color().esFuerte()
 
-}
-    method esDeMaterialQueBrilla(){
-        return false
     }
-
+    method esDeMaterialQueBrilla(){
+        return self.material().esBrillante()
+    }
 }
 object biblioteca{
-    const property color = "verde"
+    const property color = verde
     const property peso = 8000
-    const property material = "madera"
+    const property material = madera
      
-     method esDeColorFuere(){
-        return true
-}
-    method esDeMaterialQueBrilla(){
-        return false
+    method esDeColorFuerte(){
+        return self.color().esFuerte()
     }
-
+    method esDeMaterialQueBrilla(){
+        return self.material().esBrillante()
+    }
 }
 object munieco{
-    const property color = "celeste"
+    const property color = celeste
     var property peso = 10
-    const property material = "vidrio"
+    const property material = vidrio
      
-     method esDeColorFuere(){
-        return false
-}
-    method esDeMaterialQueBrilla(){
-        return true
+    method esDeColorFuerte(){
+        return self.color().esFuerte()
     }
-
+    method esDeMaterialQueBrilla(){
+        return self.material().esBrillante()
+    }
 }
 object placa{
-    var property color = "pardo"
+    var property color = pardo
     var property peso = 2000
-    const property material = "cobre"
+    const property material = cobre
      
-     method esDeColorFuere(){
-        return self.color() == "rojo" || self.color() == "verde"
-}
-    method esDeMaterialQueBrilla(){
-        return true
+    method esDeColorFuerte(){
+        return self.color().esFuerte()
     }
-
+    method esDeMaterialQueBrilla(){
+        return self.material().esBrillante()
+    }
 }
 object arito{
-    const property color = "celeste"
+    const property color = celeste
     const property peso = 180
-    const property material = "cobre"
+    const property material = cobre
      
-     method esDeColorFuere(){
-        return false
-}
+    method esDeColorFuerte(){
+        return self.color().esFuerte()
+    }
     method esDeMaterialQueBrilla(){
-        return true
+        return self.material().esBrillante()
     }
 }
 object banquito{
-    var property color = "naranja"
+    var property color = naranja
     const property peso = 1700
-    const property material = "madera"
+    const property material = madera
      
-     method esDeColorFuere(){
-        return true
-}
+    method esDeColorFuerte(){
+        return self.color().esFuerte()
+    }
     method esDeMaterialQueBrilla(){
-        return false
+        return self.material().esBrillante()
     }
 }
 object cajita{
-    const property color = "rojo"
+    const property color = rojo
     const property pesoCajaSola = 400
-    const property material = "cobre"
+    const property material = cobre
+    
      method peso(otraCosa){
         return self.pesoCajaSola()+ otraCosa.peso()
         }
-     method esDeColorFuere(){
-        return true
-}
+    method esDeColorFuerte(){
+        return self.color().esFuerte()
+    }
     method esDeMaterialQueBrilla(){
-        return true
+        return self.material().esBrillante()
     }
 }
