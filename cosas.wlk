@@ -1,23 +1,76 @@
-
+// OBJETOS : COLORES
+object celeste{
+    method esFuerte(){
+        return false
+    }
+}
+object naranja{
+     method esFuerte(){
+         return true
+    }
+}
+object pardo{
+     method esFuerte(){
+         return false
+    }
+}
+object rojo{
+    method esFuerte(){
+        return true
+    }
+}
+object verde{
+    method esFuerte(){
+        return true
+    }
+}
+// OBJETOS : MATERIALES
+object cobre{
+    method esBrillante(){
+        return true
+    }
+}
+object madera{
+    method esBrillante(){
+        return false
+    }
+}
+object cuero{
+    method esBrillante(){
+        return false
+    }
+}
+object lino{
+    method esBrillante(){
+        return false
+    }
+}
+object vidrio{
+    method esBrillante(){
+        return true
+    }
+}
+// OBJETOS : COSAS
 object remera{
     const property color = "rojo"
     const property peso = 800
     const property material = "lino"
 
     method esDeColorFuere(){
-        return true
+        return self.color().esFuerte()
     }
     method esDeMaterialQueBrilla(){
-        return false
+        return self.material().esBrillante()
     }
    }
-object pelota{
+   object pelota{
     const property color = "pardo"
     const property peso = 1300
     const property material = "cuero"
      
-     method esDeColorFuere(){
-        return false
+     method esDeColorFuerte(){
+        return self.color().esFuerte()
+
 }
     method esDeMaterialQueBrilla(){
         return false
