@@ -150,15 +150,15 @@ object banquito{
 }
 object cajita{
     const property color = rojo
-    const property pesoCajaSola = 400
-    var property pesoContenido = 0
+    const property pesoCajaVacia = 400
+    var property cosaAdentro = remera
     const property material = cobre
      
     method guardarAdentro(unaCosa){
-      pesoContenido = unaCosa.peso()
+      cosaAdentro = unaCosa
     }
     method peso(){
-        return self.pesoCajaSola() + self.pesoContenido()
+        return self.pesoCajaVacia() + self.cosaAdentro().peso()
     }
     method esDeColorFuerte(){
         return self.color().esFuerte()
